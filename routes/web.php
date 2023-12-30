@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AlternativeController;
 use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\Admin\CalculationController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PublisherController;
+use App\Http\Controllers\Admin\EvaluationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +54,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/books/{book}/edit', [BookController::class, 'edit'])->name('books.edit');
     Route::patch('/books/{book}', [BookController::class, 'update'])->name('books.update');
     Route::delete('/books/{book}/delete', [BookController::class, 'destroy'])->name('books.destroy');
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('alternative', [AlternativeController::class, 'index'])->name('alternative');
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('evaluations', [EvaluationController::class, 'index'])->name('evaluations');
+    Route::get('evaluations/{evaluation}/edit', [EvaluationController::class, 'edit'])->name('evaluations.edit');
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('calculations', [CalculationController::class, 'index'])->name('calculations');
 });
 
 Route::middleware('auth')->group(function () {

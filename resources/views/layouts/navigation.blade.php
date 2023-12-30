@@ -24,6 +24,15 @@
                     <x-nav-link :href="route('books')" :active="request()->is('books') || request()->is('books/*')">
                         {{ __('Books') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('alternative')" :active="request()->is('alternative') || request()->is('alternative/*')">
+                        {{ __('Alternative') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('evaluations')" :active="request()->is('evaluations') || request()->is('evaluations/*')">
+                        {{ __('Evaluations') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('calculations')" :active="request()->is('calculations') || request()->is('calculations/*')">
+                        {{ __('Calculations') }}
+                    </x-nav-link>
                 </div>
             </div>
 
