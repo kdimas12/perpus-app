@@ -56,13 +56,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/books/{book}/delete', [BookController::class, 'destroy'])->name('books.destroy');
 });
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('alternative', [AlternativeController::class, 'index'])->name('alternative');
-});
+// Route::middleware(['auth', 'verified'])->group(function () {
+//     Route::get('alternative', [AlternativeController::class, 'index'])->name('alternative');
+// });
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('evaluations', [EvaluationController::class, 'index'])->name('evaluations');
+    Route::get('evaluations/create', [EvaluationController::class, 'create'])->name('evaluations.create');
+    Route::post('evaluations/create', [EvaluationController::class, 'store'])->name('evaluations.store');
     Route::get('evaluations/{evaluation}/edit', [EvaluationController::class, 'edit'])->name('evaluations.edit');
+    Route::patch('evaluations/{evaluation}', [EvaluationController::class, 'update'])->name('evaluations.update');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

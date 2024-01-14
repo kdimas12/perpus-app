@@ -9,22 +9,13 @@ class Publisher extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['publisher_name'];
-
-    /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'publisher_id';
+    protected $table = "book_publisher";
+    protected $fillable = ['name'];
+    protected $primaryKey = 'book_publisher_id';
+    // protected $timestamp = true;
 
     public function books()
     {
-        return $this->hasMany(Book::class, 'publisher_id');
+        return $this->hasMany(Book::class, 'book_publisher_id');
     }
 }

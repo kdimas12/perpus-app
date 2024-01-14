@@ -11,10 +11,11 @@
                 <div class="rounded-t mb-0 px-4 py-3 border-0">
                     <div class="flex flex-wrap items-center">
                         <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-                            <h3 class="font-semibold text-base text-gray-700">Edit a new Evaluation</h3>
+                            <h3 class="font-semibold text-base text-gray-700">Edit a book of
+                                "{{ $alternative->book->title }}"</h3>
                         </div>
                         <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-                            <a href="{{ route('publishers') }}"
+                            <a href="{{ route('evaluations') }}"
                                 class="bg-red-500 text-white active:bg-red-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                                 Back to List
                             </a>
@@ -28,7 +29,9 @@
                 <div class="w-full mx-auto">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full rounded mb-4">
                         <div class="px-4">
-                            <form method="POST" action="#" class="container flex flex-col mx-auto">
+                            <form method="POST"
+                                action="{{ route('evaluations.update', ['evaluation' => $alternative->evaluation->evaluation_id]) }}"
+                                class="container flex flex-col mx-auto">
                                 @csrf
                                 @method('PATCH')
 
@@ -39,38 +42,86 @@
                                     </div>
                                     <div class="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                                         <div class="col-span-full sm:col-span-4">
-                                            <label for="jenis_buku" class="text-sm">Jenis Buku</label>
-                                            <select name="jenis_buku" id="jenis_buku" class="w-full rounded-md">
-                                                <option value="1">Fiksi</option>
-                                                <option value="2">Non-Fiksi</option>
-                                                <option value="3">Bisnis, Ekonomi, dan Manajemen</option>
-                                                <option value="4">Sains Teknologi dan Pendidikan</option>
-                                                <option value="5">Novel</option>
+                                            <label for="book_type" class="text-sm">Book Type</label>
+                                            <select name="book_type" id="book_type" class="w-full rounded-md">
+                                                <option value="0"
+                                                    {{ $alternative->evaluation->book_type == 0 ? 'selected' : '' }}>
+                                                    Choose</option>
+                                                <option value="6"
+                                                    {{ $alternative->evaluation->book_type == 6 ? 'selected' : '' }}>
+                                                    Fiction</option>
+                                                <option value="5"
+                                                    {{ $alternative->evaluation->book_type == 5 ? 'selected' : '' }}>
+                                                    Non-Fiction</option>
+                                                <option value="4"
+                                                    {{ $alternative->evaluation->book_type == 4 ? 'selected' : '' }}>
+                                                    Bisnis, Ekonomi, dan Manajemen</option>
+                                                <option value="3"
+                                                    {{ $alternative->evaluation->book_type == 3 ? 'selected' : '' }}>
+                                                    Sains Teknologi dan Pendidikan</option>
+                                                <option value="2"
+                                                    {{ $alternative->evaluation->book_type == 2 ? 'selected' : '' }}>
+                                                    Hukum dan Politik</option>
+                                                <option value="1"
+                                                    {{ $alternative->evaluation->book_type == 1 ? 'selected' : '' }}>
+                                                    Literatur Lainnya</option>
                                             </select>
-                                            <x-input-error :messages="$errors->get('jenis_buku')" class="mt-2" />
+                                            <x-input-error :messages="$errors->get('book_type')" class="mt-2" />
                                         </div>
                                         <div class="col-span-full sm:col-span-4">
-                                            <label for="jumlah_peminjam" class="text-sm">Jumlah Peminjam</label>
-                                            <input type="number" name="jumlah_peminjam" id="jumlah_peminjam"
-                                                class="w-full rounded-md">
-                                            <x-input-error :messages="$errors->get('jumlah_peminjam')" class="mt-2" />
+                                            <label for="book_loan" class="text-sm">Jumlah Peminjam</label>
+                                            <input type="number" name="book_loan" id="book_loan"
+                                                class="w-full rounded-md"
+                                                value="{{ $alternative->evaluation->book_loan }}">
+                                            <x-input-error :messages="$errors->get('book_loan')" class="mt-2" />
                                         </div>
                                         <div class="col-span-full sm:col-span-4">
-                                            <label for="popularitas" class="text-sm">Popularitas</label>
-                                            <select name="popularitas" id="popularitas" class="w-full rounded-md">
-                                                <option value="1">Sangat Baik</option>
-                                                <option value="2">Baik</option>
-                                                <option value="3">Cukup</option>
-                                                <option value="4">Buruk</option>
-                                                <option value="5">Sangat Buruk</option>
+                                            <label for="popularity" class="text-sm">Popularity</label>
+                                            <select name="popularity" id="popularity" class="w-full rounded-md">
+                                                <option value="0"
+                                                    {{ $alternative->evaluation->popularity == 0 ? 'selected' : '' }}>
+                                                    Choose</option>
+                                                <option value="5"
+                                                    {{ $alternative->evaluation->popularity == 5 ? 'selected' : '' }}>
+                                                    Sangat Baik</option>
+                                                <option value="4"
+                                                    {{ $alternative->evaluation->popularity == 4 ? 'selected' : '' }}>
+                                                    Baik</option>
+                                                <option value="3"
+                                                    {{ $alternative->evaluation->popularity == 3 ? 'selected' : '' }}>
+                                                    Cukup</option>
+                                                <option value="2"
+                                                    {{ $alternative->evaluation->popularity == 2 ? 'selected' : '' }}>
+                                                    Buruk</option>
+                                                <option value="1"
+                                                    {{ $alternative->evaluation->popularity == 1 ? 'selected' : '' }}>
+                                                    Sangat Buruk</option>
                                             </select>
-                                            <x-input-error :messages="$errors->get('popularitas')" class="mt-2" />
+                                            <x-input-error :messages="$errors->get('popularity')" class="mt-2" />
                                         </div>
                                         <div class="col-span-full sm:col-span-4">
-                                            <label for="ketersediaan" class="text-sm">Ketersediaan</label>
-                                            <input type="number" name="ketersediaan" id="ketersediaan"
-                                                class="w-full rounded-md">
-                                            <x-input-error :messages="$errors->get('ketersediaan')" class="mt-2" />
+                                            <label for="availability" class="text-sm">Availability</label>
+                                            <select name="availability" id="availability" class="w-full rounded-md">
+                                                <option value="0"
+                                                    {{ $alternative->evaluation->availability == 0 ? 'selected' : '' }}>
+                                                    Choose</option>
+                                                <option value="5"
+                                                    {{ $alternative->evaluation->availability == 5 ? 'selected' : '' }}>
+                                                    Sangat Banyak (>8)</option>
+                                                <option value="4"
+                                                    {{ $alternative->evaluation->availability == 4 ? 'selected' : '' }}>
+                                                    Banyak (5 - 8)</option>
+                                                <option value="3"
+                                                    {{ $alternative->evaluation->availability == 3 ? 'selected' : '' }}>
+                                                    Cukup (3 - 4)</option>
+                                                <option value="2"
+                                                    {{ $alternative->evaluation->availability == 2 ? 'selected' : '' }}>
+                                                    Sedikit (2)</option>
+                                                <option value="1"
+                                                    {{ $alternative->evaluation->availability == 1 ? 'selected' : '' }}>
+                                                    Sangat Sedikit (1)</option>
+                                            </select>
+                                            <x-input-error :messages="$errors->get('availability')" class="mt-2" />
                                         </div>
                                     </div>
                                 </fieldset>

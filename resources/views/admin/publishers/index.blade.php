@@ -57,15 +57,15 @@
                                                 </th>
                                                 <td
                                                     class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                    {{ $publisher->publisher_name }}
+                                                    {{ $publisher->name }}
                                                 </td>
                                                 <td
                                                     class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                    <a href="{{ route('publishers.edit', ['publisher' => $publisher->publisher_id]) }}"
+                                                    <a href="{{ route('publishers.edit', ['publisher' => $publisher->book_publisher_id]) }}"
                                                         class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Edit
                                                     </a>
                                                     {{-- Button Delete with A tag --}}
-                                                    <a href="{{ route('publishers.destroy', ['publisher' => $publisher->publisher_id]) }}"
+                                                    <a href="{{ route('publishers.destroy', ['publisher' => $publisher->book_publisher_id]) }}"
                                                         class="bg-red-500 text-white active:bg-red-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                                         data-confirm-delete="true">Delete
                                                     </a>

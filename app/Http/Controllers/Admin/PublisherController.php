@@ -29,7 +29,7 @@ class PublisherController extends Controller
     public function store(PublisherStoreRequest $request)
     {
         Publisher::create([
-            'publisher_name' => $request->publisher_name
+            'name' => $request->publisher_name,
         ]);
 
         return redirect('publishers')->with('toast_success', 'Publisher has been created successfully!');
@@ -37,7 +37,7 @@ class PublisherController extends Controller
 
     public function edit(Publisher $publisher)
     {
-        $publisher = Publisher::findOrFail($publisher->publisher_id);
+        $publisher = Publisher::findOrFail($publisher->book_publisher_id);
 
         return view('admin.publishers.edit', [
             'publisher' => $publisher
@@ -46,10 +46,10 @@ class PublisherController extends Controller
 
     public function update(PublisherStoreRequest $request, Publisher $publisher)
     {
-        $publisher = Publisher::findOrFail($publisher->publisher_id);
+        $publisher = Publisher::findOrFail($publisher->book_publisher_id);
 
         $publisher->update([
-            'publisher_name' => $request->publisher_name
+            'name' => $request->publisher_name
         ]);
 
         return redirect('publishers')->with('toast_success', 'Publisher has been updated successfully!');
@@ -57,7 +57,7 @@ class PublisherController extends Controller
 
     public function destroy(Publisher $publisher)
     {
-        $publisher = Publisher::findOrFail($publisher->publisher_id);
+        $publisher = Publisher::findOrFail($publisher->book_publisher_id);
 
         $publisher->delete();
 

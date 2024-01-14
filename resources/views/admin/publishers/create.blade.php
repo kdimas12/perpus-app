@@ -28,7 +28,7 @@
                 <div class="w-full mx-auto">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full rounded mb-4">
                         <div class="px-4">
-                            <form method="POST" action="{{ route('publishers.create') }}"
+                            <form method="POST" action="{{ route('publishers.store') }}"
                                 class="container flex flex-col mx-auto">
                                 @csrf
 

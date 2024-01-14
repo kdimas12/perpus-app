@@ -37,6 +37,7 @@ class BookController extends Controller
     public function store(BookStoreRequest $request)
     {
         Book::create([
+            'book_category_id' => $request->category_id,
             'title' => $request->title,
             'code' => $request->code,
             'author' => $request->author,
@@ -46,9 +47,8 @@ class BookController extends Controller
             'isbn' => $request->isbn,
             'description' => $request->description,
             'status' => $request->status,
-            'publish_city' => $request->publish_city,
-            'publisher_id' => $request->publisher_id,
-            'category_id' => $request->category_id,
+            'city' => $request->publish_city,
+            'book_publisher_id' => $request->publisher_id,
         ]);
 
         return redirect('books')->with('toast_success', 'Book has been created!');
@@ -72,6 +72,7 @@ class BookController extends Controller
         $book = Book::findOrFail($book);
 
         $book->update([
+            'book_category_id' => $request->category_id,
             'title' => $request->title,
             'code' => $request->code,
             'author' => $request->author,
@@ -81,9 +82,8 @@ class BookController extends Controller
             'isbn' => $request->isbn,
             'description' => $request->description,
             'status' => $request->status,
-            'publish_city' => $request->publish_city,
-            'publisher_id' => $request->publisher_id,
-            'category_id' => $request->category_id,
+            'city' => $request->publish_city,
+            'book_publisher_id' => $request->publisher_id,
         ]);
 
         return redirect('books')->with('toast_success', 'Book has been updated!');

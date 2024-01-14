@@ -9,21 +9,22 @@ class Book extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['title', 'code', 'author', 'genre', 'year', 'edition', 'isbn', 'description', 'publish_city', 'status', 'publisher_id', 'category_id'];
+    protected $table = "book";
+    protected $fillable = ['book_category_id', 'code', 'title', 'author', 'genre', 'year', 'edition', 'isbn', 'city', 'description', 'book_publisher_id', 'status'];
     protected $primaryKey = 'book_id';
 
     public function publisher()
     {
-        return $this->belongsTo(Publisher::class, 'publisher_id');
+        return $this->belongsTo(Publisher::class, 'book_publisher_id');
     }
 
     public function category()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(Category::class, 'book_category_id');
+    }
+
+    public function alternative()
+    {
+        return $this->hasOne(Alternative::class, 'alternative_id');
     }
 }

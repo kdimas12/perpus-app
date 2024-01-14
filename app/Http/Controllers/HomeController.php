@@ -15,7 +15,7 @@ class HomeController extends Controller
         //     $builder->where('title', 'like', '%' . $request->q . '%');
         // })->paginate(5);
         $books = Book::with('category')->when($request->category, function (Builder $builder) use ($request) {
-            $builder->where('category_id', $request->category);
+            $builder->where('book_category_id', $request->category);
         })->when($request->q, function (Builder $builder) use ($request) {
             $builder->where('title', 'like', '%' . $request->q . '%');
         })->paginate(5);

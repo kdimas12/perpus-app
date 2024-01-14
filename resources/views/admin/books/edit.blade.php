@@ -83,9 +83,9 @@
                                             <select id="publisher_id" name="publisher_id" class="w-full rounded-md">
                                                 <option value="">Select Publisher</option>
                                                 @foreach ($publishers as $publisher)
-                                                    <option value="{{ $publisher->publisher_id }}"
-                                                        {{ $publisher->publisher_id == $book->publisher_id ? 'selected' : '' }}>
-                                                        {{ $publisher->publisher_name }}
+                                                    <option value="{{ $publisher->book_publisher_id }}"
+                                                        {{ $publisher->book_publisher_id == $book->book_publisher_id ? 'selected' : '' }}>
+                                                        {{ $publisher->name }}
                                                     </option>
                                                 @endforeach
                                             </select>
@@ -94,7 +94,7 @@
                                         <div class="col-span-full sm:col-span-2">
                                             <label for="publish_city" class="text-sm">Publish City</label>
                                             <input id="publish_city" name="publish_city" type="text"
-                                                class="w-full rounded-md" value="{{ $book->publish_city }}">
+                                                class="w-full rounded-md" value="{{ $book->city }}">
                                             <x-input-error :messages="$errors->get('publish_city')" class="mt-2" />
                                         </div>
                                         <div class="col-span-full">
@@ -102,9 +102,9 @@
                                             <select id="category_id" name="category_id" class="w-full rounded-md">
                                                 <option value="">Select Category</option>
                                                 @foreach ($categories as $category)
-                                                    <option value="{{ $category->category_id }}"
-                                                        {{ $category->category_id == $book->category_id ? 'selected' : '' }}>
-                                                        {{ $category->category_name }}
+                                                    <option value="{{ $category->book_category_id }}"
+                                                        {{ $category->book_category_id == $book->book_category_id ? 'selected' : '' }}>
+                                                        {{ $category->name }}
                                                     </option>
                                                 @endforeach
                                             </select>

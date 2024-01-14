@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    {{-- <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-3">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="rounded-t mb-0 px-4 py-3 border-0">
@@ -53,162 +53,34 @@
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            1
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Katak Hendak Menjadi Lembu
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            6
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            4
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            5
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            4
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            2
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Manajemen Kerja
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            4
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            3
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            3
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            3
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            3
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Dahsyatnya Bangun Pagi Tahajud subuh dan Dhuha
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            5
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            4
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            3
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            4
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Gajah Mada
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            5
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            4
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            5
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Memberantas Korupsi
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            3
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            6
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Mustika Naga
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            6
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                    </tr>
+                                    @foreach ($alternatives as $key => $alternative)
+                                        <tr>
+                                            <th
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
+                                                {{ $key + 1 }}
+                                            </th>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->book->title }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->book_type }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->book_loan }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->popularity }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->availability }}
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -216,8 +88,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="pb-12">
+    </div> --}}
+
+    <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-3">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="rounded-t mb-0 px-4 py-3 border-0">
@@ -265,162 +138,34 @@
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            1
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Katak Hendak Menjadi Lembu
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.5
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.63
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.56
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.56
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            2
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Manajemen Kerja
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.34
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.47
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.34
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.42
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            3
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Dahsyatnya Bangun Pagi Tahajud subuh dan Dhuha
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.42
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.31
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.45
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.42
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            4
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Gajah Mada
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.42
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.31
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.45
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.28
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            5
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Memberantas Korupsi
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.17
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.31
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.34
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.42
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            6
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Mustika Naga
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.5
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.31
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.23
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.28
-                                        </td>
-                                    </tr>
+                                    @foreach ($alternatives as $key => $alternative)
+                                        <tr>
+                                            <th
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
+                                                {{ $key + 1 }}
+                                            </th>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->book->title }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->book_type }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->book_loan }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->popularity }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $alternative->evaluation->availability }}
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -469,114 +214,32 @@
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            1
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Katak Hendak Menjadi Lembu
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.55
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            1
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            2
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Manajemen Kerja
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.379
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            5
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            3
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Dahsyatnya Bangun Pagi Tahajud subuh dan Dhuha
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.3948
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            3
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            4
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Gajah Mada
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.386
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            4
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            5
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Memberantas Korupsi
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.248
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            6
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            6
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Mustika Naga
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            0.395
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            2
-                                        </td>
-                                    </tr>
+                                    @php
+                                        $rank = 1;
+                                    @endphp
+                                    @foreach ($sortedAlternatives as $key => $sortedAlternative)
+                                        <tr>
+                                            <th
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
+                                                {{ $key + 1 }}
+                                            </th>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $sortedAlternative->book->title }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $sortedAlternative->evaluation->total }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                {{ $rank }}
+                                            </td>
+                                        </tr>
+                                        @php
+                                            $rank += 1;
+                                        @endphp
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

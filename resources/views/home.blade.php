@@ -52,9 +52,9 @@
                                 class="w-full rounded-md border-gray-200 py-2.5 pe-10 shadow-sm sm:text-sm">
                                 <option value="">All</option>
                                 @foreach ($categories as $category)
-                                    <option value="{{ $category->category_id }}"
-                                        {{ request('category') == $category->category_id ? 'selected' : '' }}>
-                                        {{ $category->category_name }}
+                                    <option value="{{ $category->book_category_id }}"
+                                        {{ request('category') == $category->book_category_id ? 'selected' : '' }}>
+                                        {{ $category->name }}
                                     </option>
                                 @endforeach
                             </select>

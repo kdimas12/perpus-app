@@ -57,15 +57,15 @@
                                                 </th>
                                                 <td
                                                     class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                    {{ $category->category_name }}
+                                                    {{ $category->name }}
                                                 </td>
                                                 <td
                                                     class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                    <a href="{{ route('categories.edit', ['category' => $category->category_id]) }}"
+                                                    <a href="{{ route('categories.edit', ['category' => $category->book_category_id]) }}"
                                                         class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Edit
                                                     </a>
                                                     {{-- Button Delete with A tag --}}
-                                                    <a href="{{ route('categories.destroy', ['category' => $category->category_id]) }}"
+                                                    <a href="{{ route('categories.destroy', ['category' => $category->book_category_id]) }}"
                                                         class="bg-red-500 text-white active:bg-red-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                                         data-confirm-delete="true">Delete
                                                     </a>

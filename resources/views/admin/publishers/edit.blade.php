@@ -29,7 +29,7 @@
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full rounded mb-4">
                         <div class="px-4">
                             <form method="POST"
-                                action="{{ route('publishers.update', ['publisher' => $publisher->publisher_id]) }}"
+                                action="{{ route('publishers.update', ['publisher' => $publisher->book_publisher_id]) }}"
                                 class="container flex flex-col mx-auto">
                                 @csrf
                                 @method('PATCH')
@@ -43,7 +43,7 @@
                                         <div class="col-span-full sm:col-span-4">
                                             <label for="publisher_name" class="text-sm">Publisher Name</label>
                                             <input id="publisher_name" name="publisher_name" type="text"
-                                                class="w-full rounded-md" value="{{ $publisher->publisher_name }}">
+                                                class="w-full rounded-md" value="{{ $publisher->name }}">
                                             <x-input-error :messages="$errors->get('publisher_name')" class="mt-2" />
                                         </div>
                                     </div>

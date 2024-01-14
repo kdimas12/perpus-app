@@ -22,7 +22,7 @@ class PublisherStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'publisher_name' => 'required|unique:publishers,publisher_name'
+            'publisher_name' => 'required|unique:book_publisher,name'
         ];
     }
 

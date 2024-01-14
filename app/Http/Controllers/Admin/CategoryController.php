@@ -29,7 +29,7 @@ class CategoryController extends Controller
     public function store(CategoryStoreRequest $request)
     {
         Category::create([
-            'category_name' => $request->category_name
+            'name' => $request->category_name
         ]);
 
         return redirect('categories')->with('toast_success', 'Category has been created!');
@@ -49,7 +49,7 @@ class CategoryController extends Controller
         $category = Category::findOrFail($category->category_id);
 
         $category->update([
-            'category_name' => $request->category_name
+            'name' => $request->category_name
         ]);
 
         return redirect('categories')->with('toast_success', 'Category has been updated!');

@@ -82,8 +82,8 @@
                                             <select id="publisher_id" name="publisher_id" class="w-full rounded-md">
                                                 <option value="">Select Publisher</option>
                                                 @foreach ($publishers as $publisher)
-                                                    <option value="{{ $publisher->publisher_id }}">
-                                                        {{ $publisher->publisher_name }}
+                                                    <option value="{{ $publisher->book_publisher_id }}">
+                                                        {{ $publisher->name }}
                                                     </option>
                                                 @endforeach
                                             </select>
@@ -100,8 +100,8 @@
                                             <select id="category_id" name="category_id" class="w-full rounded-md">
                                                 <option value="">Select Category</option>
                                                 @foreach ($categories as $category)
-                                                    <option value="{{ $category->category_id }}">
-                                                        {{ $category->category_name }}
+                                                    <option value="{{ $category->book_category_id }}">
+                                                        {{ $category->name }}
                                                     </option>
                                                 @endforeach
                                             </select>

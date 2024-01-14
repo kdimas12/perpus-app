@@ -69,11 +69,11 @@
                                                     <p class="text-xs italic">{{ $book->code }}</p>
                                                     <p class="text-sm">{{ $book->author }}. {{ $book->year }}.
                                                         {{ $book->publish_city }}:
-                                                        {{ $book->publisher->publisher_name }}</p>
+                                                        {{ $book->publisher->name }}</p>
                                                 </td>
                                                 <td
                                                     class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                    {{ $book->category->category_name }}
+                                                    {{ $book->category->name }}
                                                 </td>
                                                 <td
                                                     class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">

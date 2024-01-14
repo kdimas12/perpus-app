@@ -11,8 +11,14 @@
                 <div class="rounded-t mb-0 px-4 py-3 border-0">
                     <div class="flex flex-wrap items-center">
                         <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-                            <h3 class="font-semibold text-base text-gray-700">Data Evaluations</h3>
-                            <p class="text-sm text-gray-500">The following data of Evaluations.</p>
+                            <h3 class="font-semibold text-base text-gray-700">Data Alternative</h3>
+                            <p class="text-sm text-gray-500">The following data of Alternative.</p>
+                        </div>
+                        <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+                            <a href="{{ route('evaluations.create') }}"
+                                class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Add
+                                New Alternative
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -32,7 +38,7 @@
                                         </th>
                                         <th
                                             class="px-6 bg-gray-50 text-gray-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                            Evaluation Name
+                                            Title
                                         </th>
                                         <th
                                             class="px-6 bg-gray-50 text-gray-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left w-20">
@@ -42,70 +48,31 @@
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            1
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Kamus Pintar Fisika untuk SMA
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            <a href="{{ route('evaluations.edit', ['evaluation' => 1]) }}"
-                                                class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Edit
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            2
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Analisis Data Sistem Aplikasi Pemasaran
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            <a href="#"
-                                                class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Edit
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            3
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Komputer Pertamaku, Berkenalan dengan Komputer
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            <a href="#"
-                                                class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Edit
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
-                                            4
-                                        </th>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            Mahir Menggunakan Microsoft Power Point
-                                        </td>
-                                        <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                            <a href="#"
-                                                class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Edit
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @if ($alternatives->count() > 0)
+                                        @foreach ($alternatives as $key => $alternative)
+                                            <tr>
+                                                <th
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left">
+                                                    {{ $key + 1 }}
+                                                </th>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                    {{ $alternative->book->title }}
+                                                </td>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                                    <a href="{{ route('evaluations.edit', ['evaluation' => $alternative->alternative_id]) }}"
+                                                        class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Edit
+                                                        value
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @else
+                                        <tr>
+                                            <td colspan="5" class="text-center text-sm py-2">No data found</td>
+                                        </tr>
+                                    @endif
                                 </tbody>
                             </table>
                         </div>
