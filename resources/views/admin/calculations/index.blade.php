@@ -150,19 +150,19 @@
                                             </td>
                                             <td
                                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                {{ $alternative->evaluation->book_type }}
+                                                {{ round($alternative->evaluation->book_type, 2) }}
                                             </td>
                                             <td
                                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                {{ $alternative->evaluation->book_loan }}
+                                                {{ round($alternative->evaluation->book_loan, 2) }}
                                             </td>
                                             <td
                                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                {{ $alternative->evaluation->popularity }}
+                                                {{ round($alternative->evaluation->popularity, 2) }}
                                             </td>
                                             <td
                                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                {{ $alternative->evaluation->availability }}
+                                                {{ round($alternative->evaluation->availability, 2) }}
                                             </td>
                                         </tr>
                                     @endforeach
@@ -229,7 +229,7 @@
                                             </td>
                                             <td
                                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
-                                                {{ $sortedAlternative->evaluation->total }}
+                                                {{ round($sortedAlternative->evaluation->total, 2) }}
                                             </td>
                                             <td
                                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
