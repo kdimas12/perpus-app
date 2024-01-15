@@ -13,6 +13,9 @@ class EvaluationController extends Controller
     public function index()
     {
         $alternatives = Alternative::with('book')->get();
+        $title = 'Delete Book!';
+        $text = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
 
         return view('admin.evaluations.index', [
             'alternatives' => $alternatives
@@ -72,5 +75,14 @@ class EvaluationController extends Controller
         ]);
 
         return redirect('evaluations')->with('toast_success', 'Evaluation has been updated successfully!');
+    }
+
+    public function destroy($alternative)
+    {
+        $alternative = Alternative::findOrFail($alternative);
+
+        $alternative->delete();
+
+        return redirect('evaluations')->with('toast_success', 'Evaluation has been deleted successfully!');
     }
 }

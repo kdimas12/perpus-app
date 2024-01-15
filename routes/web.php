@@ -66,6 +66,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('evaluations/create', [EvaluationController::class, 'store'])->name('evaluations.store');
     Route::get('evaluations/{evaluation}/edit', [EvaluationController::class, 'edit'])->name('evaluations.edit');
     Route::patch('evaluations/{evaluation}', [EvaluationController::class, 'update'])->name('evaluations.update');
+    Route::delete('evaluations/{evaluation}/delete', [EvaluationController::class, 'destroy'])->name('evaluations.destroy');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
