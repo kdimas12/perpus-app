@@ -23,6 +23,49 @@
                 </div>
             </div>
         </div>
+        {{-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-3">
+            <div class="bg-white shadow-sm sm:rounded-lg">
+                <div class="rounded-t mb-0 px-4 py-3 border-0">
+                    <div class="mb-3">
+                        <h3 class="font-semibold text-base text-gray-700">Find your book!</h3>
+                    </div>
+                    <form action="{{ route('home') }}" method="get" class="flex flex-col md:flex-row gap-3">
+                        <div class="relative md:w-4/5">
+                            <label for="searchbar" class="sr-only"> Search </label>
+                            <input type="text" id="searchbar"
+                                placeholder="{{ request('q') == '' ? 'Search for...' : request('q') }}" name="q"
+                                class="w-full rounded-md border-gray-200 py-2.5 pe-10 shadow-sm sm:text-sm" />
+                            <span class="absolute inset-y-0 end-0 grid w-10 place-content-center">
+                                <span class="sr-only">Search</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="w-full md:w-1/5">
+                            <select name="category" id="category"
+                                class="w-full rounded-md border-gray-200 py-2.5 pe-10 shadow-sm sm:text-sm">
+                                <option value="">All</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->book_category_id }}"
+                                        {{ request('category') == $category->book_category_id ? 'selected' : '' }}>
+                                        {{ $category->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="w-full md:w-1/5">
+                            <button type="submit"
+                                class="w-full rounded-md bg-indigo-600 px-5 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring">
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> --}}
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="w-full mx-auto">

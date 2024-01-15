@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Alternative;
 use App\Models\Book;
+use App\Models\Category;
 use App\Models\Evaluation;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class EvaluationController extends Controller
 {
@@ -22,12 +24,20 @@ class EvaluationController extends Controller
         ]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $books = Book::all();
+        // $books = Book::with('category')->when($request->category, function (Builder $builder) use ($request) {
+        //     $builder->where('book_category_id', $request->category);
+        // })->when($request->q, function (Builder $builder) use ($request) {
+        //     $builder->where('title', 'like', '%' . $request->q . '%');
+        // })->get();
+
+        $categories = Category::all();
 
         return view('admin.evaluations.create', [
-            'books' => $books
+            'books' => $books,
+            // 'categories' => $categories,
         ]);
     }
 
